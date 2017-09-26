@@ -1,0 +1,90 @@
+@import "./imports/_normalize.scss";
+
+$border-color: rgba(0,0,0,0.07);
+$background-color: #f4f4f4;
+$textColor: #888;
+
+
+@mixin rounded() {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+*{ box-sizing: border-box }
+
+body {
+  font-family: sans;
+  background-color: $background-color;
+}
+
+#app-container{
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.right {
+  text-align: right;
+  color: $textColor;
+}
+
+.box {
+  border: 1px solid $border-color;
+  padding: 15px;
+  background-color: white;
+}
+
+.avatar {
+  @include rounded();
+}
+
+.grid {
+  display: flex;
+}
+
+.grid-with-top {
+  margin-top: 12px;
+}
+
+h4 {
+  margin: 0;
+  line-height: 32px;
+  margin-left: 5px;
+  color: red;
+}
+
+
+// Despues de 500px, aplica las sig reglas
+@media screen and (min-width: 500px) {
+  img {
+    width: 300px;
+  }
+
+  .box {
+    width: 100%;
+  }
+
+  .item {
+    width: 330px;
+    margin: 0 auto;
+  }
+
+  h4 {
+    color: green;
+  }
+}
+
+
+
+
+
+// @media screen and (condition) {
+//   // CSS rules
+// }
